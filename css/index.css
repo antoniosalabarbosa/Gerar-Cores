@@ -1,0 +1,44 @@
+*{
+    margin: 0; 
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 200ms ease-in;
+}
+
+button#btn_color{
+    font-size: 24px;
+    background-color: #696969;
+    color: #fff;
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+button#btn_color:hover{background-color: #b4b4b4;}
+
+input#inp_cor{
+    width: 300px;
+    padding: 20px 0;
+    outline: none;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #353b48;
+    cursor: pointer;
+    transition: 90ms ease;
+}
+
+input#cx_cor:active{background-color: #4d4e50;}
+
+span.copy.inativo{visibility: hidden; opacity: 0;}
+span.copy{font-size: 20px; transition: 100ms ease;}
