@@ -26,7 +26,7 @@ button#btn_color{
 
 button#btn_color:hover{background-color: #b4b4b4;}
 
-input#inp_cor{
+#inp_cor{
     width: 300px;
     padding: 20px 0;
     outline: none;
@@ -40,5 +40,36 @@ input#inp_cor{
 
 input#cx_cor:active{background-color: #4d4e50;}
 
-span.copy.inativo{visibility: hidden; opacity: 0;}
-span.copy{font-size: 20px; transition: 100ms ease;}
+span.copy.inativo{
+    display: none;
+}
+
+span.copy{
+    width: 100vw;
+    max-width: 200px;
+    padding: 10px 40px;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    font-size: 20px; 
+    transition: 100ms ease;
+    animation: copy_message 200ms forwards ease;
+}
+
+span.copy.success{ border-left: 5px solid green }
+span.copy.warning{ border-left: 5px solid red }
+
+@keyframes copy_message {
+    0% {
+        transform: translateX(30%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        background-color: #fff;
+    }
+}
